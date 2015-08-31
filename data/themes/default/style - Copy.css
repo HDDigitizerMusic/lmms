@@ -13,17 +13,17 @@ QMdiArea {
 
 AutomationEditor {
 	background-color: rgb(0, 0, 0);
-	color: #ffffff;
-	qproperty-vertexColor: #35f5d6;
-	qproperty-gridColor: #617b87;
+	color: #e0e0e0;
+	qproperty-vertexColor: #ff77af;
+	qproperty-gridColor: #808080;
 	
 	qproperty-graphColor: qlineargradient(spread:reflect,
                      x1:0, y1:0, x2:0, y2:1,
-                     stop:0 rgba(53, 245, 214, 170),  stop:1 rgba(10, 187, 204, 50));
+                     stop:0 rgba(153, 175, 255, 250),  stop:1 rgba(153, 175, 255, 100));
 	/*#99afff;*/
 	qproperty-scaleColor: qlineargradient(spread:reflect,
                      x1:0, y1:0.5, x2:1, y2:0.5,
-                     stop:0 #1d2629, stop:1 #2c373d);
+                     stop:0 #333, stop:1 #202020);
 	/*rgb( 32, 32, 32 );*/
 }
 
@@ -31,21 +31,21 @@ AutomationEditor {
 
 QLineEdit {
 	border-radius: 4px;
-	border: 1px inset rgba(44,55,61,255);
-	background: #14191e;
-	color: #ffffff;
+	border: 2px inset rgba(91,101,113,128);
+	background: #49515b;
+	color: #e0e0e0;
 }
 
 /* text box when it wants text */
 
 QLineEdit:focus {
-	border: 1px solid rgba(34,195,111,255);
+	border: 1px solid rgba(0,0,0, 128);
 }
 
 
 QToolTip {
 	border-radius: 4px;
-	background: qlineargradient(spread:reflect, x1:0.5, y1:0.5, x2:0.5, y2:0, stop:0 rgba(25,29,34,255), stop:1 rgba(25,29,34,255));
+	background: qlineargradient(spread:reflect, x1:0.5, y1:0.5, x2:0.5, y2:0, stop:0 rgba(0, 0, 0, 220), stop:1 rgba(0, 0, 0, 220));
 	opacity: 175;
 	color: #ffffff;
 }
@@ -60,13 +60,13 @@ textFloat {
 
 
 QMenu {
-	border:1.0px solid #22c36f;
+	border:1px solid #22c36f;
 	background-color: #191D22;
 	font-size:11px;
 }
 
 QMenu::separator {
-	height: 1.0px;
+	height: 1px;
 	background: #000000;
 	margin-left: 5px;
 	margin-right: 5px;
@@ -109,10 +109,10 @@ QMenu::indicator:selected {
 
 PianoRoll {
 	background-color: rgb(0, 0, 0);
-	qproperty-gridColor: rgb( 97, 123, 135 );
+	qproperty-gridColor: rgb( 128, 128, 128 );
 	qproperty-noteModeColor: rgb( 255, 255, 255 );
-	qproperty-noteColor: rgb( 34, 195, 111 );
-	qproperty-barColor: #129853;
+	qproperty-noteColor: rgb( 119, 199, 216 );
+	qproperty-barColor: #4afd85;
 }
 
 /* main toolbar oscilloscope - can have transparent bg now */
@@ -132,15 +132,15 @@ cpuloadWidget {
 /* scrollbar: trough */
 
 QScrollBar:horizontal {
-    border: none;
-    background: rgb(23,28,32,255);
-    height: 9px;
-    margin: 0px 10px;
+    border: 1px solid #000000;
+    background: rgb( 40,50,60 );
+    height: 14px;
+    margin: 0px 13px;
 }
 QScrollBar:vertical {
-    border: none;
-    background: rgb(23,28,32,255);
-    width: 10px;
+    border: 1px solid #000000;
+    background: rgb( 40,50,60 );
+    width: 14px;
     margin: 13px 0px;
 }
 
@@ -159,65 +159,77 @@ QScrollBar::add-page:vertical:pressed, QScrollBar::sub-page:vertical:pressed {
 /* scrollbar: handles (sliders) */
 
 QScrollBar::handle:horizontal {
-    background: rgba(53,64,73,255);
-    border: none;
-    border-radius: 4px;
+    background: qlineargradient(spread:reflect,
+                     x1:0.5, y1:0, x2:0.5, y2:1,
+                     stop:0 #969696, stop:0.5 #c9c9c9, stop:1 #aaa);
+    border: 1px outset #888;
+    border-radius: 2px;
     min-width: 24px;
 }
 
 QScrollBar::handle:horizontal:hover {
-    background: rgba(66,80,92,255);
+    background: qlineargradient(spread:reflect,
+                     x1:0.5, y1:0, x2:0.5, y2:1,
+                     stop:0 #969696, stop:0.5 #f0f0f0, stop:1 #aaa);
 }
 
 QScrollBar::handle:horizontal:pressed {
-    background: rgba(19,141,79,137);
+    background: qlineargradient(spread:reflect,
+                     x1:0.5, y1:0, x2:0.5, y2:1,
+                     stop:0 #747474, stop:1 #c9c9c9);
 }
 
 QScrollBar::handle:vertical {
-    background: rgba(53,64,73,255);
-    border: none;
-    border-radius: 4px;
+    background: qlineargradient(spread:reflect,
+                     x1:0, y1:0.5, x2:1, y2:0.5,
+                     stop:0 #969696, stop:0.5 #c9c9c9, stop:1 #aaa);
+    border: 1px outset #888;
+    border-radius: 2px;
     min-height: 24px;
 }
 
 QScrollBar::handle:vertical:hover {
-    background: rgba(66,80,92,255);
+    background: qlineargradient(spread:reflect,
+                     x1:0, y1:0.5, x2:1, y2:0.5,
+                     stop:0 #969696, stop:0.5 #f0f0f0, stop:1 #aaa);
 }
 
 QScrollBar::handle:vertical:pressed {
-    background: rgba(19,141,79,137);
+    background: qlineargradient(spread:reflect,
+                     x1:0, y1:0.5, x2:1, y2:0.5,
+                     stop:0 #747474, stop:1 #c9c9c9);
 }
 
 QScrollBar::handle:horizontal:disabled, QScrollBar::handle:vertical:disabled  {
-	background: #283138;
+	background: #14191e;
 	border-radius: 1px;
-	border: none;
+	border: 1px solid rgba(0,0,0,32);
 }
 
 /* arrow buttons */
 
 QScrollBar::add-line, QScrollBar::sub-line {
-    background: #171c20;
-    border-radius: 0px;
-    border: none;
+    background: qradialgradient(cx:0.3, cy:0.3, radius:0.8, fx:0.3, fy:0.3, stop:0 #c9c9c9, stop:1 #969696 );
+    border-radius: 1px;
+    border: 1px solid #131313;
     subcontrol-origin: margin;
 }
 
-QScrollBar::add-line:horizontal 	{  	subcontrol-position: right; width: 10px;}
-QScrollBar::sub-line:horizontal 	{ 	subcontrol-position: left; width: 10px;}
-QScrollBar::add-line:vertical 		{ 	subcontrol-position: bottom; height: 15px;}
-QScrollBar::sub-line:vertical 		{ 	subcontrol-position: top; height: 15px;}
+QScrollBar::add-line:horizontal 	{  	subcontrol-position: right; width: 12px;}
+QScrollBar::sub-line:horizontal 	{ 	subcontrol-position: left; width: 12px;}
+QScrollBar::add-line:vertical 		{ 	subcontrol-position: bottom; height: 12px;}
+QScrollBar::sub-line:vertical 		{ 	subcontrol-position: top; height: 12px;}
 
 QScrollBar::add-line:hover, QScrollBar::sub-line:hover {
-	background: rgba(23,28,32,255);
+	background: qradialgradient(cx:0.3, cy:0.3, radius:0.8, fx:0.3, fy:0.3, stop:0 #e0e0e0, stop:0.5 #c9c9c9, stop:1 #969696 );
 }
 
 QScrollBar::add-line:pressed, QScrollBar::sub-line:pressed {
-	background: rgba(23,28,32,255);
+	background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #969696, stop:0.5 #c9c9c9, stop:1 #969696 );
 }
 
 QScrollBar::add-line:disabled, QScrollBar::sub-line:disabled {
-	background: #283138;
+	background: #747474;
 }
 
 /* arrow button arrows */
@@ -256,8 +268,10 @@ nStateButton {
 
 /* track background colors */
 trackContentWidget {
-	qproperty-darkerColor: #11161b;
-	qproperty-lighterColor: #0d1115;
+	qproperty-darkerColor: qlineargradient(x1:0, y1:0, x2:0, y2:1, 
+							stop:0 rgb( 50, 50, 50 ), stop:0.33 rgb( 20, 20, 20 ), stop:1 rgb( 15, 15, 15 ) );
+	qproperty-lighterColor: qlineargradient(x1:0, y1:0, x2:0, y2:1, 
+							stop:0 rgb( 50, 50, 50 ), stop:0.33 rgb( 40, 40, 40 ), stop:1 rgb( 30, 30, 30 ) );
 }
 
 
@@ -308,7 +322,7 @@ nameLabel, effectLabel, sf2InstrumentView > QLabel {
 /* main toolbar sliders (master vol, master pitch) */
 
 automatableSlider::groove:vertical {
-	background: rgba(0,0,0,128);
+	background: rgba(0,0,0, 128);
 	border: 1px inset rgba(100,100,100, 64);
 	border-radius: 2px;
 	width: 2px;
@@ -327,35 +341,35 @@ automatableSlider::handle:vertical {
 /* window that shows up when you add effects */
 
 EffectSelectDialog QScrollArea {
-	background: #283138;
+	background: #5b6571;
 }
 
 /* the inner boxes in LADSPA effect windows */
 
 EffectControlDialog QGroupBox {
-	background: #20272c;
+	background: #49515b;
 	margin-top: 1ex;
 	padding: 10px 2px 1px;
 	border-radius: 4px;
-	border: none;
+	border: 1px solid rgba(0,0,0, 64);
 }
 
 /* the inner box titles when present (channel 1, channel 2...) */
 
 EffectControlDialog QGroupBox::title {
 	subcontrol-origin: margin;
-	subcontrol-position: top center;
-	background: #20272c;
+	subcontrol-position: top left;
+	background: #7b838d;
 	color: white;
 	border-radius: 2px;
-	border: none;
+	border: 1px solid rgba(0,0,0, 64);
 	padding: 2px 1px;
 }
 
 /* main toolbar */
 
 QWidget#mainToolbar {
-	background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #232f3b, stop:1 #0f1215);
+	background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #98a2a7, stop:1 #5b646f);
 }
 
 /* smaller toolbars */
@@ -365,10 +379,10 @@ QToolBar {
 }
 
 QToolButton, toolButton {
-	padding: 2px 2px 2px 2px;
-	border-radius: 3px;
-	border: 1px solid rgba(15,15,15);
-	background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #3c4c54, stop:1 #2d3b40);
+	padding: 1px 1px 1px 1px;
+	border-radius: 2px;
+	border: 1px solid rgba(0,0,0,32);
+	background: qradialgradient(cx:0.3, cy:0.3, radius:0.8, fx:0.3, fy:0.3, stop:0 #c9c9c9, stop:1 #969696 );
 	font-size:10px;
 	color: black;
 }
@@ -379,23 +393,23 @@ QToolButton, toolButton {
 /* all tool buttons */
 
 QToolButton:hover, toolButton:hover {
-	background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #61747f, stop:1 #4f676f);
-	border: 1px solid rgba(15,15,15);
+	background: qradialgradient(cx:0.3, cy:0.3, radius:0.8, fx:0.3, fy:0.3, stop:0 #e0e0e0, stop:0.5 #c9c9c9, stop:1 #969696 );
+	border: 1px solid rgba(0,0,0,128);
 	color: white;
 }
 
 QToolButton:pressed, toolButton:pressed {
-	background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #2c373c, stop:1 #1d2629);
+	background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #969696, stop:0.5 #c9c9c9, stop:1 #969696 );
 	padding: 2px 1px 0px 1px;
-	border: 1px solid rgba(15,15,15);
+	border: 1px solid rgba(0,0,0,128);
 	color: white;
 }
 
 QToolButton:checked, toolButton:checked  {
-	background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #61747f, stop:1 #4f676f);
+	background: qradialgradient(cx:0.3, cy:0.3, radius:0.8, fx:0.3, fy:0.3, stop:0 #e0e0e0, stop:0.8 #c9c9c9, stop:1 #c0c0c0 );
 	border-radius: 3px;
 	padding: 2px 1px 0px 1px;
-	border: 1px solid rgba(15,15,15);
+	border: 1px solid rgba(0,0,0,255);
 	color: black;
 }
 
@@ -403,7 +417,7 @@ QToolButton:checked, toolButton:checked  {
 
 trackLabelButton {
 	background-color: #14191E;
-	color: white;
+	color: #ffffff;
 	font-size: 11px;
 	font-weight: normal;
 	border-radius: 1px;
@@ -412,7 +426,7 @@ trackLabelButton {
 }
 
 trackLabelButton:hover {
-	background-color: #0f1419;
+	background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:0, y2:0.5, stop:0 #5b6571, stop:0.75 #7b838d, stop:1 #7b838d );
 	color: white;
 	border: 1px solid rgba(0,0,0,64);
 	padding: 1px 0px;
@@ -420,34 +434,33 @@ trackLabelButton:hover {
 }
 
 trackLabelButton:pressed {
-	background: #242d36;
+	background: qlineargradient(spread:reflect, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 #49515b, stop:0.3 #5b6571, stop:1 #6b7581 );
 	color: white;
 	border: 1px solid rgba(0,0,0,64);
 	padding: 2px 0px 0px;
-	font-weight: solid;
+	font-weight: bold;
 }
 
 trackLabelButton:checked {
-	background: #34414e;
+	background: qlineargradient(spread:reflect, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 #49515b, stop:0.3 #5b6571, stop:1 #6b7581 );
 	color: white;
-	border: 1px solid rgba(0,0,0,64);
-	border-radius: 0px;
+	border: 1px solid rgba(0,0,0,128);
 	padding: 2px 0px 0px;
-	font-weight: solid;
+	font-weight: bold;
 }
 
 trackLabelButton:checked:hover {
-	background-color: #242d36;
+	background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:0, y2:0.5, stop:0 #5b6571, stop:0.75 #7b838d, stop:1 #7b838d );
 }
 
 trackLabelButton:checked:pressed {
-	background: #14191E;
+	background: qlineargradient(spread:reflect, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 #49515b, stop:0.3 #5b6571, stop:1 #6b7581 );
 }
 
 /* sidebar, sidebar buttons */
 
 SideBar {
-	background: #14191f;
+	background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop: 0 #98a2a7, stop: 1.0 #5b646f);
 }
 
 SideBar QToolButton {
@@ -461,16 +474,16 @@ FxMixerView QPushButton, EffectRackView QPushButton, ControllerRackView QPushBut
 }
 
 FxLine {
-	background: #14191e;
+	background: #14191eff;
 	color: #e0e0e0;
 	qproperty-backgroundActive: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:0, 
-								stop:0 #232c35, stop:1 #14191e );
+								stop:0 #7b838d, stop:1 #6b7581 );
 }
 
 /* persistent peak markers for fx peak meters */
 fader {
-	qproperty-peakGreen: rgb(65,198,123);
-	qproperty-peakRed: rgb(226,41,41);
+	qproperty-peakGreen: rgb( 74, 253, 133);
+	qproperty-peakRed: rgb( 255, 100, 100);
 }
 
 timeLine {
@@ -478,7 +491,7 @@ timeLine {
 }
 
 QTreeView {
-	alternate-background-color: #14191e;
+	alternate-background-color: #747474;
 }
 
 TrackContainerView QLabel
@@ -490,28 +503,28 @@ TrackContainerView QLabel
 
 /* instrument pattern */
 PatternView {
-	color: rgb(34,195,110);
-	qproperty-fgColor: rgb(255,255,255);
-	qproperty-textColor: rgb(255,255,255);
+	color: rgb( 119, 199, 216 );
+	qproperty-fgColor: rgb( 187, 227, 236 );
+	qproperty-textColor: rgb( 255, 255, 255 );
 }
 
 /* sample track pattern */
 SampleTCOView {
-	color: rgb(223,115,36);
-	qproperty-fgColor: rgb(247,220,199);
-	qproperty-textColor: rgb(255,255,255);	
+	color: rgb( 74, 253, 133 );
+	qproperty-fgColor: rgb( 187, 227, 236 );
+	qproperty-textColor: rgb( 255, 60, 60 );	
 }
 
 /* automation pattern */
 AutomationPatternView {
-	color: #1a7b6b;
-	qproperty-fgColor: rgb(34,160,141);
-	qproperty-textColor: rgb(255,255,255);
+	color: #99afff;
+	qproperty-fgColor: rgb( 204, 215, 255 );
+	qproperty-textColor: rgb( 255, 255, 255 );
 }
 
 /* bb-pattern */
 bbTCOView {
-	color: rgb(10,187,204); /* default colour for bb-tracks, used when the colour hasn not been defined by the user */
+	color: rgb( 128, 182, 175 ); /* default colour for bb-tracks, used when the colour hasn't been defined by the user */
 	qproperty-textColor: rgb( 255, 255, 255 );
 }
 
@@ -714,18 +727,18 @@ NesInstrumentView knob {
 /* palette information  */
 
 LmmsPalette {
-	qproperty-background: #283138;
-	qproperty-windowText: #1de276;
-	qproperty-base: #10151a;
+	qproperty-background: #5b6571;
+	qproperty-windowText: #f0f0f0;
+	qproperty-base: #808080;
 	qproperty-text: #ffffff;
-	qproperty-button: #3c4c54;
+	qproperty-button: #c9c9c9;
 	qproperty-shadow: #000;
-	qproperty-buttonText: #ffffff;
-	qproperty-brightText: #ffffff;
-	qproperty-highlight: #25303b;
+	qproperty-buttonText: #000;
+	qproperty-brightText: #4afd85;
+	qproperty-highlight: #202020;
 	qproperty-highlightedText: #ffffff;
 	/* the next two are used for whatsthis dialogs */
-	qproperty-toolTipText: #ffffff;
-	qproperty-toolTipBase: #10151a;
+	qproperty-toolTipText: #000;
+	qproperty-toolTipBase: #c9c9c9;
 }
 
