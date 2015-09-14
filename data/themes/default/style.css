@@ -251,13 +251,20 @@ TrackContainerView QFrame{
 
 /* autoscroll, loop, stop behaviour toggle buttons */
 
+<<<<<<< HEAD
 NStateButton {
+=======
+<<<<<<< HEAD
+nStateButton {
+>>>>>>> master
 	max-height: 26px;
 	max-width: 26px;
 	min-height: 26px;
 	min-width: 26px;
 }
 
+=======
+>>>>>>> LMMS/master
 /* track background colors */
 TrackContentWidget {
 	qproperty-darkerColor: rgb(17,22,27);
@@ -365,6 +372,7 @@ QWidget#mainToolbar {
 /* smaller toolbars */
 
 QToolBar {
+<<<<<<< HEAD
 	background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #98a2a7, stop:1 #5b646f);
 	border: none;
 	padding: 1px;
@@ -381,10 +389,29 @@ QToolButton {
 	border-radius: 3px;
 	border: 1px solid rgba(15,15,15);
 	background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #3c4c54, stop:1 #2d3b40);
+=======
+	background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #98a2a7, stop:1 #5b646f);
+	border: none;
+	padding: 2px;
+	spacing: 0;
+}
+
+QToolBar::separator {
+	border: none;
+	width: 5px;
+}
+
+QToolButton {
+	padding: 1px 1px 1px 1px;
+	border-radius: 5px;
+	border: 1px solid rgba(63, 63, 63, 128);
+	background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #98a2a7, stop:1 #5b646f);
+>>>>>>> LMMS/master
 	font-size:10px;
 	color: black;
 }
 
+<<<<<<< HEAD
 /* separate corner rounding for play and stop buttons! */
 
 QToolButton#playButton {
@@ -396,20 +423,46 @@ QToolButton#stopButton {
 	border-top-right-radius: 2px 2px;
 	border-bottom-right-radius: 2px 2px;
 }
+=======
+<<<<<<< HEAD
+=======
+/* separate corner rounding for play and stop buttons! */
+
+QToolButton#playButton {
+	border-top-left-radius: 10px 10px;
+	border-bottom-left-radius: 10px 10px;
+}
+
+QToolButton#stopButton {
+	border-top-right-radius: 10px 10px;
+	border-bottom-right-radius: 10px 10px;
+}
+>>>>>>> LMMS/master
+>>>>>>> master
 
 /* record and record-accompany can be styled with #recordButton and #recordAccompanyButton respectively */
 
 /* all tool buttons */
 
+<<<<<<< HEAD
 QToolButton:hover {
+=======
+<<<<<<< HEAD
+QToolButton:hover, toolButton:hover {
+>>>>>>> master
 	background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #61747f, stop:1 #4f676f);
 	border: 1px solid rgba(15,15,15);
+=======
+QToolButton:hover {
+	background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #c0cdd3, stop:1 #71797d);
+>>>>>>> LMMS/master
 	color: white;
 }
 
 QToolButton:pressed {
 	background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #2c373c, stop:1 #1d2629);
 	padding: 2px 1px 0px 1px;
+<<<<<<< HEAD
 	border: 1px solid rgba(15,15,15);
 	color: white;
 }
@@ -419,6 +472,14 @@ QToolButton:checked  {
 	border-radius: 3px;
 	padding: 2px 1px 0px 1px;
 	border: 1px solid rgba(15,15,15);
+=======
+	color: white;
+}
+
+QToolButton:checked  {
+	background: qradialgradient(cx:0.3, cy:0.3, radius:0.8, fx:0.3, fy:0.3, stop:0 #e0e0e0, stop:0.8 #c9c9c9, stop:1 #c0c0c0 );
+	padding: 2px 1px 0px 1px;
+>>>>>>> LMMS/master
 	color: black;
 }
 
